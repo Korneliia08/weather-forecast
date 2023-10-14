@@ -1,0 +1,90 @@
+body .wrapper main {
+    background-color: #dadada;
+    display: none;
+    width: 100%;
+    height: calc(100% - 170px);
+    font-size: 15px;
+}
+
+body .wrapper main .blockForWeatherToday {
+    width: 100%;
+    background-color: #dcdbff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+}
+
+body .wrapper main .blockForWeatherToday .mainInformation,
+body .wrapper main .blockForWeatherToday .otherInformation {
+    padding: 8px;
+    background-color: #3296d7;
+    border-radius: 20px;
+    box-shadow: 0px 1px 5px 1px #1f1f1f, 0px 0px 8px 0px inset #2c0174;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+body .wrapper main .blockForWeatherToday .otherInformation {
+
+}
+
+.imgDecribeWeather {
+    width: 80px;
+}
+
+.imgSunriseSunset {
+    width: 70px;
+}
+
+
+span.degree,
+.nowTime,
+time,
+.otherInformationSpan {
+    font-size: 25px;
+    color: #fff700;
+    text-shadow: 0px 0px 5px black;
+    font-weight: bold;
+    font-family: cursive;
+}
+
+.otherInformationSpan {
+    font-size: 18px;
+}
+
+.titleInTable {
+    color: white;
+    font-size: 26px;
+    text-shadow: 0px 1px 2px black;
+    font-family: cursive;
+    text-align: center;
+}
+
+time {
+    font-size: 18px;
+    text-align: center;
+}
+
+.nowTime {
+    text-shadow: 1px 1px 5px black;
+}
+
+td {
+    /*outline: 2px solid red;*/
+}
+
+
+.whichWeatherTd {
+    padding-left: 40px;
+}
+
+.redTitle {
+    font-size: 18px;
+    color: #a90000;
+    font-weight: bold;
+    text-shadow: 0px 0px 2px wheat;
+}
+

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ITVDN</title>
+    <link href="./styles/main.css" rel="stylesheet">
+    <link href="./styles/startPanel.css" rel="stylesheet">
+    <link href="./styles/header.css" rel="stylesheet">
+    <link href="./styles/mainForWeather.css" rel="stylesheet">
+    <link href="./styles/footer.css" rel="stylesheet">
+
+
+    <!--responsive Styles -->
+    <link href="/styles/responsive/main.css" rel="stylesheet">
+    <link href="./styles/responsive/startPanel.css" rel="stylesheet">
+    <link href="./styles/responsive/header.css" rel="stylesheet">
+    <link href="./styles/responsive/mainForWhether.css" rel="stylesheet">
+    <link href="./styles/responsive/footer.css" rel="stylesheet">
+
+</head>
+<body>
+<div class="wrapper">
+    <div class="startPanel">
+        <button class="titleBtn">
+            Check <sup class="weatherSup">Weather</sup>
+        </button>
+    </div>
+    <header>
+        <div class="blockFordata">
+            <time>Wednesday, 12 of October, 2023</time>
+        </div>
+        <div class="blockForBottomOfHeader">
+            <div class="blockForClock">
+                <div class="hour">
+                    <span class="spanForHour">15</span>
+                </div>
+                <div class="minutes">
+                    <span class="spanForMinutes">15</span>
+                </div>
+                <div class="seconds">
+                    <span class="spanForSekunds">15</span>
+                </div>
+            </div>
+            <h2 class="titleCity">Kyiv</h2>
+            <form>
+                <label class="labelCheck">Check weather in Your City</label>
+                <input class="inputCheck" name="inputCity" placeholder="Enter name of city" type="text">
+            </form>
+            <img class="imgRainbow" src="./assets/images/rainbow.png">
+        </div>
+    </header>
+    <main>
+        <div class="blockForWeatherToday">
+            <div class="mainInformation">
+                <table>
+                    <tr>
+                        <td><span class="titleInTable">Temperature:
+                        </span></td>
+                        <td>
+                            <span
+                                    class="degree"> &nbsp;20 &#8451;</span></td>
+                        <td class="whichWeatherTd" colspan="2" rowspan="2"><img alt="photoWhichWeather"
+                                                                                class="imgDecribeWeather"
+                                                                                src="./assets/images/sun.png"></td>
+                    </tr>
+                    <tr>
+                        <td><span class="titleInTable">Feels like:
+                        </span></td>
+                        <td>
+                            <span
+                                    class="degree">&nbsp;20 &#8451;</span></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <!-- <time class="nowTime"> 07:46 PM</time> -->
+                        </td>
+                        <td class="whichWeatherTd" colspan="2"><span class="titleInTable">Sun</span></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2"><img alt="photoSunrise" class="imgSunriseSunset"
+                                             src="./assets/images/sunrise.png">
+                        </td>
+                        <td colspan="2"><span class="titleInTable">Sunrise:</span></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <time> 07:46 AM</time>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2"><img alt="photoSunrise" class="imgSunriseSunset"
+                                             src="./assets/images/sunset.png"></td>
+                        <td colspan="2"><span class="titleInTable">Sunset:</span></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <time> 07:46 PM</time>
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+            <div class="otherInformation">
+                <table>
+                    <tr>
+                        <td><span class="titleInTable">Humidity:</span></td>
+                        <td><span class="otherInformationSpan">18%</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="titleInTable">Wind:</span></td>
+                        <td><span class="otherInformationSpan">20 m/sek</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="titleInTable">Pressure:</span></td>
+                        <td><span class="otherInformationSpan">400mm</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="redTitle">Probability <br>
+                            precipitation:</span>
+                        </td>
+                        <td>
+                            <span class="otherInformationSpan">40%</span>
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+    </main>
+    <footer><span class="spanForFooter">This website made by Korneliia &copy;</span></footer>
+</div>
+
+
+<script src="scripts/cloud.js"></script>
+<script src="scripts/clock.js"></script>
+<script src="scripts/header.js"></script>
+<script src="scripts/startPanel.js"></script>
+<script src="scripts/main.js"></script>
+<script src="scripts/weather.js"></script>
+</body>
+</html>

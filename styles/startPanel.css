@@ -1,0 +1,51 @@
+body .wrapper .startPanel {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+body .wrapper .startPanel .titleBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 40px;
+    background-color: #075af6d6;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 10px;
+    z-index: 2;
+    box-shadow: 0px 0px 10px 5px inset #09a6e2ba, 1px 1px 50px 8px #045da4;
+    border: none;
+    color: #e8fc05;
+    text-shadow: 1px 1px 4px #61ccf9;
+    letter-spacing: 2px;
+    font-family: cursive;
+    font-size: 25px;
+    transition: 50ms;
+}
+
+body .wrapper .startPanel .titleBtn:hover {
+    cursor: pointer;
+    background-color: rgba(236, 235, 233, 0.68);
+    box-shadow: 0px 0px 10px 5px inset rgba(4, 105, 143, 0.73), 1px 1px 50px 8px #045da4;
+    color: #0338a8;
+    font-weight: bold;
+    border: 2px solid blue;
+}
+
+body .wrapper .startPanel .titleBtn:active {
+    background-color: rgba(204, 201, 195, 0.68);
+}
+
+.weatherSup {
+    margin-left: 5px;
+    color: #04007a;
+    text-decoration: underline;
+    font-weight: bold;
+}
+

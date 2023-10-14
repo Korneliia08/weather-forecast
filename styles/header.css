@@ -1,0 +1,145 @@
+body .wrapper header {
+    background-color: #cdccf5;
+    display: none;
+    width: 100%;
+    height: 150px;
+    box-sizing: border-box;
+}
+
+body .wrapper header .blockFordata {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 4px;
+    background: #00007d;
+    box-shadow: 0px 0px 10px 5px inset #002482;
+}
+
+
+body .wrapper header .blockFordata time {
+    color: #ffffff;
+    font-size: 18px;
+    text-shadow: 0px 0px 10px #100f0f;
+    letter-spacing: 2px;
+    font-family: math;
+}
+
+body .wrapper header .blockForBottomOfHeader {
+    padding: 2px 0 20px 0;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0094cf;
+    box-shadow: 0px 0px 40px 5px inset #0047a5, 0px 0px 20px 4px inset #fffffa;
+}
+
+body .wrapper header .blockForBottomOfHeader .blockForClock {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 2px;
+    position: relative;
+    top: -8px;
+}
+
+body .wrapper header .blockForBottomOfHeader .blockForClock .hour,
+body .wrapper header .blockForBottomOfHeader .blockForClock .minutes,
+body .wrapper header .blockForBottomOfHeader .blockForClock .seconds {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    background-color: #ffffffc7;
+    border: 1px solid rgba(9, 13, 189, 0.8);
+    box-shadow: 4px 0px 10px 2px #002a8a, 0px 0px 26px 1px inset #00a0d6;
+}
+
+body .wrapper header .blockForBottomOfHeader .blockForClock .minutes {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    top: 10px;
+    left: -20px;
+    background-color: #dededee6;
+}
+
+body .wrapper header .blockForBottomOfHeader .blockForClock .seconds {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    top: 20px;
+    left: -40px;
+    background-color: #dcf60091;
+    border: 1px solid #dec104;
+    box-shadow: 4px 0px 10px 2px #002a8a, 0px 0px 26px 1px inset #b8c403;
+}
+
+
+body .wrapper header .blockForBottomOfHeader form {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+    position: relative;
+    top: -5px;
+}
+
+.spanForHour, .spanForMinutes, .spanForSekunds {
+    font-size: 24px;
+    color: darkblue;
+    font-family: cursive;
+    text-shadow: 0px 1px 2px #022c7f;
+}
+
+.spanForMinutes {
+    font-size: 22px;
+}
+
+.spanForSekunds {
+    font-size: 18px;
+    color: #f6f6f6;
+    font-family: cursive;
+    text-shadow: 2px 1px 2px #000000;
+    font-weight: bold;
+}
+
+.labelCheck {
+    color: white;
+    letter-spacing: 1px;
+    text-shadow: 0px 1px 1px #000f4f;
+    font-family: cursive;
+    font-size: 20px;
+}
+
+.inputCheck {
+    width: 220px;
+    padding: 2px;
+    border-radius: 10px;
+    border: 2px inset #bfbf00;
+    background: #ffffff82;
+    color: #07359d;
+    font-weight: bold;
+    font-size: 14px;
+    text-shadow: 0px 0px 1px black;
+}
+
+.imgRainbow {
+    height: auto;
+    width: 8%;
+}
+
+.titleCity {
+    color: white;
+    font-size: 35px;
+    text-shadow: 0px 1px 2px black;
+    font-family: cursive;
+}
