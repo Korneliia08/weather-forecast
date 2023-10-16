@@ -82,8 +82,8 @@ class Weather {
         this.tempSpanHTML.innerHTML = Math.round((this.objWeather.temp - 273.15) * 100) / 100 + "&#8451;";
         this.feelsLikeSpanHTML.innerHTML = Math.round((this.objWeather.feelsLike - 273.15) * 100) / 100 + "&#8451;";
         this.currentWeatherSpanHTML.textContent = this.objWeather.currentWeather;
-        this.sunriseSpanHTML.textContent = new Date(this.objWeather.sunrise);
-        this.sunsetSpanHTML.textContent = new Date(this.objWeather.sunset);
+        this.sunriseSpanHTML.textContent = new Date(this.objWeather.sunrise * 1000);
+        this.sunsetSpanHTML.textContent = new Date(this.objWeather.sunset * 1000);
         this.humiditySpanHTML.textContent = this.objWeather.humidity + "%";
         this.windSpanHTML.textContent = this.objWeather.wind + "m/s";
         this.directionSpanHTML.textContent = this.objWeather.windDirection;
