@@ -137,6 +137,11 @@ body .wrapper header .blockForBottomOfHeader .blockForInput {
     text-shadow: 0px 1px 1px black;
 }
 
+body .blockForInput input.redPlaceholder::placeholder {
+    color: rgba(252, 4, 4, 0.68);
+}
+
+
 .imgRainbow {
     height: auto;
     width: 8%;

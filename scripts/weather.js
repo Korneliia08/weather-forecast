@@ -1,5 +1,6 @@
 class Weather {
     city;
+    redInput;
 
     // parametres for Api
     nameOfCity;
@@ -20,11 +21,15 @@ class Weather {
     directionSpanHTML = document.querySelector(".directionSpan");
 
     constructor(whichCityParam) {
+        this.redInput = document.querySelector("input[name='inputCity']");
         this.city = whichCityParam;
         this.getLocation();
+
     }
 
     getLocation() {
+        this.redInput.placeholder = "Enter name of city";
+        this.redInput.classList.remove('redPlaceholder')
         fetch('https://api.openweathermap.org/geo/1.0/direct?' + new URLSearchParams({
             q: this.city,
             appid: "470f5ba6ca749dbd45cbda178d735719"
@@ -39,15 +44,21 @@ class Weather {
             .then(json => {
                 let jsonArray = Array.from(json);
                 if (jsonArray.length < 1) {
-                    console.log("error");
+                    throw new Error("city not found");
                 } else {
                     this.nameOfCity = jsonArray[0].name;
                     this.lat = jsonArray[0].lat;
                     this.lon = jsonArray[0].lon;
                     this.getWeather();
+                    this.redInput.value = "";
                 }
             })
-            .catch(error => console.error(error));
+            .catch(error => {
+                this.redInput.value = "";
+                this.redInput.placeholder = "city not found, try again";
+                this.redInput.classList.add('redPlaceholder')
+                console.error(error);
+            });
     }
 
     getWeather() {
@@ -74,7 +85,9 @@ class Weather {
                 }
                 this.updateWeather();
             })
-            .catch(error => console.error(error));
+            .catch(error => {
+                console.error(error)
+            });
     }
 
     updateWeather() {
