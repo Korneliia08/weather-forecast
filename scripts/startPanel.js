@@ -21,6 +21,8 @@ class StartPanel {
         main.style.display = "flex";
         footer.style.display = "flex";
         wrapper.style.padding = "0";
+
+        let headerObj = new Header();
         this.createClock();
     }
 

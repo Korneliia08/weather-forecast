@@ -72,19 +72,7 @@ time {
     text-shadow: 1px 1px 5px black;
 }
 
-td {
-    /*outline: 2px solid red;*/
-}
-
 
 .whichWeatherTd {
     padding-left: 40px;
 }
-
-.redTitle {
-    font-size: 18px;
-    color: #a90000;
-    font-weight: bold;
-    text-shadow: 0px 0px 2px wheat;
-}
-

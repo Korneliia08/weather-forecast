@@ -1,7 +1,16 @@
 class Header {
     inputCity = document.querySelector("input[name='inputCity']");
+    whichCity;
+
 
     constructor() {
-        console.log(this.inputCity);
+        this.inputCity.addEventListener("keypress", this.getCity.bind(this));
+    }
+
+    getCity(event) {
+        if (event.code === "Enter") {
+            this.whichCity = event.target.value;
+            let weatherInCityObj = new Weather(this.whichCity);
+        }
     }
 }

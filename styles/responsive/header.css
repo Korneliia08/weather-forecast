@@ -1,0 +1,71 @@
+@media (max-width: 750px) {
+    body .wrapper header {
+        height: 100px;
+    }
+
+    body .wrapper header .blockFordata {
+        height: 40px;
+    }
+
+
+    body .wrapper header .blockFordata time {
+        font-size: 15px;
+    }
+
+    body .wrapper header .blockForBottomOfHeader {
+        height: 60px;
+    }
+
+    body .wrapper header .blockForBottomOfHeader .blockForClock .hour,
+    body .wrapper header .blockForBottomOfHeader .blockForClock .minutes,
+    body .wrapper header .blockForBottomOfHeader .blockForClock .seconds {
+        width: 50px;
+        height: 50px;
+    }
+
+    body .wrapper header .blockForBottomOfHeader .blockForClock .minutes {
+        width: 40px;
+        height: 40px;
+        top: 10px;
+        left: -20px;
+    }
+
+    body .wrapper header .blockForBottomOfHeader .blockForClock .seconds {
+        width: 35px;
+        height: 35px;
+        top: 20px;
+        left: -40px;
+    }
+
+
+    body .wrapper header .blockForBottomOfHeader form {
+        row-gap: 5px;
+    }
+
+    .spanForHour, .spanForMinutes, .spanForSekunds {
+        font-size: 20px;
+    }
+
+    .spanForMinutes {
+        font-size: 18px;
+    }
+
+    .spanForSekunds {
+        font-size: 16px;
+    }
+
+    .labelCheck {
+        display: none;
+    }
+
+    .inputCheck {
+        width: 180px;
+        font-size: 18px;
+        padding: 4px;
+    }
+
+    .titleCity {
+        font-size: 29px;
+    }
+
+}

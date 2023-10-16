@@ -42,10 +42,12 @@
                 </div>
             </div>
             <h2 class="titleCity">Kyiv</h2>
-            <form>
+            <div class="blockForInput">
                 <label class="labelCheck">Check weather in Your City</label>
                 <input class="inputCheck" name="inputCity" placeholder="Enter name of city" type="text">
-            </form>
+            </div>
+
+
             <img class="imgRainbow" src="./assets/images/rainbow.png">
         </div>
     </header>
@@ -58,7 +60,7 @@
                         </span></td>
                         <td>
                             <span
-                                    class="degree"> &nbsp;20 &#8451;</span></td>
+                                    class="degree tempSpan"> &nbsp;20 &#8451;</span></td>
                         <td class="whichWeatherTd" colspan="2" rowspan="2"><img alt="photoWhichWeather"
                                                                                 class="imgDecribeWeather"
                                                                                 src="./assets/images/sun.png"></td>
@@ -68,13 +70,13 @@
                         </span></td>
                         <td>
                             <span
-                                    class="degree">&nbsp;20 &#8451;</span></td>
+                                    class="degree feelsLikeSpan">&nbsp;20 &#8451;</span></td>
                     </tr>
                     <tr>
                         <td colspan="2">
-                            <!-- <time class="nowTime"> 07:46 PM</time> -->
                         </td>
-                        <td class="whichWeatherTd" colspan="2"><span class="titleInTable">Sun</span></td>
+                        <td class="whichWeatherTd" colspan="2"><span class="titleInTable currentWeatherSpan">Sun</span>
+                        </td>
                     </tr>
                     <tr>
                         <td rowspan="2"><img alt="photoSunrise" class="imgSunriseSunset"
@@ -84,7 +86,7 @@
                     </tr>
                     <tr>
                         <td colspan="2">
-                            <time> 07:46 AM</time>
+                            <time class="sunriseSpan"> 07:46 AM</time>
                         </td>
                     </tr>
                     <tr>
@@ -94,7 +96,7 @@
                     </tr>
                     <tr>
                         <td colspan="2">
-                            <time> 07:46 PM</time>
+                            <time class="sunsetSpan"> 07:46 PM</time>
                         </td>
                     </tr>
                 </table>
@@ -104,23 +106,22 @@
                 <table>
                     <tr>
                         <td><span class="titleInTable">Humidity:</span></td>
-                        <td><span class="otherInformationSpan">18%</span></td>
+                        <td><span class="otherInformationSpan humiditySpan">18%</span></td>
                     </tr>
                     <tr>
-                        <td><span class="titleInTable">Wind:</span></td>
-                        <td><span class="otherInformationSpan">20 m/sek</span></td>
+                        <td><span class="titleInTable">Wind speed:</span></td>
+                        <td><span class="otherInformationSpan windSpan">20 m/sek</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="titleInTable">Wind direction:</span>
+                        </td>
+                        <td>
+                            <span class="otherInformationSpan directionSpan">left</span>
+                        </td>
                     </tr>
                     <tr>
                         <td><span class="titleInTable">Pressure:</span></td>
-                        <td><span class="otherInformationSpan">400mm</span></td>
-                    </tr>
-                    <tr>
-                        <td><span class="redTitle">Probability <br>
-                            precipitation:</span>
-                        </td>
-                        <td>
-                            <span class="otherInformationSpan">40%</span>
-                        </td>
+                        <td><span class="otherInformationSpan pressureSpan">400mm</span></td>
                     </tr>
                 </table>
 
