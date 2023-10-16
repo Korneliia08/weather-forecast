@@ -19,6 +19,7 @@ class Weather {
     windSpanHTML = document.querySelector(".windSpan");
     pressureSpanHTML = document.querySelector(".pressureSpan");
     directionSpanHTML = document.querySelector(".directionSpan");
+    imgHTML = document.querySelector(".imgDecribeWeather");
 
     constructor(whichCityParam) {
         this.redInput = document.querySelector("input[name='inputCity']");
@@ -81,7 +82,8 @@ class Weather {
                     humidity: json.main.humidity,
                     wind: json.wind.speed,
                     windDirection: json.wind.deg,
-                    pressure: json.main.pressure
+                    pressure: json.main.pressure,
+                    nameOfIcon: json.weather[0].icon
                 }
                 this.updateWeather();
             })
@@ -99,9 +101,8 @@ class Weather {
         this.sunsetSpanHTML.textContent = new Date(this.objWeather.sunset * 1000).toLocaleString().split(" ")[1];
         this.humiditySpanHTML.textContent = this.objWeather.humidity + "%";
         this.windSpanHTML.textContent = this.objWeather.wind + "m/s";
-        //this.directionSpanHTML.textContent = this.objWeather.windDirection;
         this.directionSpanHTML.style.transform = `rotate(${this.objWeather.windDirection}deg)`
         this.pressureSpanHTML.textContent = this.objWeather.pressure + "hPa";
-        console.log(json);
+        this.imgHTML.src = `https://openweathermap.org/img/wn/${this.objWeather.nameOfIcon}@2x.png`
     }
 }

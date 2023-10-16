@@ -41,13 +41,13 @@
                     <span class="spanForSekunds">15</span>
                 </div>
             </div>
-            <h2 class="titleCity">Kyiv</h2>
-            <div class="blockForInput">
-                <label class="labelCheck">Check weather in Your City</label>
-                <input class="inputCheck" name="inputCity" placeholder="Enter name of city" type="text"
-                >
+            <div class="container">
+                <h2 class="titleCity">Kyiv</h2>
+                <div class="blockForInput">
+                    <label class="labelCheck">Check weather in Your City</label>
+                    <input class="inputCheck" name="inputCity" placeholder="Enter name of city" type="text">
+                </div>
             </div>
-
 
             <img class="imgRainbow" src="./assets/images/rainbow.png">
         </div>
@@ -62,9 +62,15 @@
                         <td>
                             <span
                                     class="degree tempSpan"> &nbsp;20 &#8451;</span></td>
-                        <td class="whichWeatherTd" colspan="2" rowspan="2"><img alt="photoWhichWeather"
-                                                                                class="imgDecribeWeather"
-                                                                                src="./assets/images/sun.png"></td>
+                        <td class="whichWeatherTd" rowspan="2">
+
+                            <div>
+
+                                <img alt="photoWhichWeather"
+                                     class="imgDecribeWeather"><span
+                                    class="titleInTable currentWeatherSpan">Sun</span>
+                            </div>
+                        </td>
                     </tr>
                     <tr>
                         <td><span class="titleInTable">Feels like:
@@ -73,15 +79,10 @@
                             <span
                                     class="degree feelsLikeSpan">&nbsp;20 &#8451;</span></td>
                     </tr>
+
                     <tr>
-                        <td colspan="2">
-                        </td>
-                        <td class="whichWeatherTd" colspan="2"><span class="titleInTable currentWeatherSpan">Sun</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td rowspan="2"><img alt="photoSunrise" class="imgSunriseSunset"
-                                             src="./assets/images/sunrise.png">
+                        <td class="sunriseTd" rowspan="2"><img alt="photoSunrise" class="imgSunriseSunset"
+                                                               src="./assets/images/sunrise.png">
                         </td>
                         <td colspan="2"><span class="titleInTable">Sunrise:</span></td>
                     </tr>
@@ -91,8 +92,8 @@
                         </td>
                     </tr>
                     <tr>
-                        <td rowspan="2"><img alt="photoSunrise" class="imgSunriseSunset"
-                                             src="./assets/images/sunset.png"></td>
+                        <td class="sunsetTd" rowspan="2"><img alt="photoSunset" class="imgSunriseSunset"
+                                                              src="./assets/images/sunset.png"></td>
                         <td colspan="2"><span class="titleInTable">Sunset:</span></td>
                     </tr>
                     <tr>

@@ -44,8 +44,9 @@ span.degree,
 .nowTime,
 time,
 .otherInformationSpan {
-    font-size: 25px;
+    font-size: 20px;
     color: #fff700;
+    padding-left: 4px;
     text-shadow: 0px 0px 5px black;
     font-weight: bold;
     font-family: cursive;
@@ -60,7 +61,7 @@ time,
 
 .titleInTable {
     color: white;
-    font-size: 26px;
+    font-size: 24px;
     text-shadow: 0px 1px 2px black;
     font-family: cursive;
     text-align: center;
@@ -77,6 +78,23 @@ time {
 
 
 .whichWeatherTd {
-    padding-left: 40px;
+    padding-left: 25px;
 }
 
+.whichWeatherTd div {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.currentWeatherSpan {
+    position: relative;
+    top: -20px;
+}
+
+.sunsetTd,
+.sunriseTd {
+    text-align: right;
+    padding-right: 10px;
+}
