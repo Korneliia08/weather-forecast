@@ -51,8 +51,11 @@ time,
     font-family: cursive;
 }
 
-.otherInformationSpan {
-    font-size: 18px;
+.otherInformationSpan img {
+    width: 30px;
+    position: relative;
+    top: 6px;
+    left: 20px;
 }
 
 .titleInTable {

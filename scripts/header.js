@@ -5,6 +5,7 @@ class Header {
 
     constructor() {
         this.inputCity.addEventListener("keypress", this.getCity.bind(this));
+        new Weather("Mostyska");
     }
 
     getCity(event) {

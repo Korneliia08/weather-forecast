@@ -27,7 +27,7 @@
     </div>
     <header>
         <div class="blockFordata">
-            <time>Wednesday, 12 of October, 2023</time>
+            <time class="dateTime">Wednesday, 12 of October, 2023</time>
         </div>
         <div class="blockForBottomOfHeader">
             <div class="blockForClock">
@@ -44,7 +44,8 @@
             <h2 class="titleCity">Kyiv</h2>
             <div class="blockForInput">
                 <label class="labelCheck">Check weather in Your City</label>
-                <input class="inputCheck" name="inputCity" placeholder="Enter name of city" type="text">
+                <input class="inputCheck" name="inputCity" placeholder="Enter name of city" type="text"
+                >
             </div>
 
 
@@ -116,7 +117,8 @@
                         <td><span class="titleInTable">Wind direction:</span>
                         </td>
                         <td>
-                            <span class="otherInformationSpan directionSpan">left</span>
+                            <span class="otherInformationSpan "><img class="directionSpan"
+                                                                     src="assets/images/arrow.png"></span>
                         </td>
                     </tr>
                     <tr>
@@ -133,6 +135,7 @@
 
 
 <script src="scripts/cloud.js"></script>
+<script src="scripts/date.js"></script>
 <script src="scripts/clock.js"></script>
 <script src="scripts/header.js"></script>
 <script src="scripts/startPanel.js"></script>

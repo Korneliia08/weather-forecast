@@ -95,11 +95,12 @@ class Weather {
         this.tempSpanHTML.innerHTML = Math.round((this.objWeather.temp - 273.15) * 100) / 100 + "&#8451;";
         this.feelsLikeSpanHTML.innerHTML = Math.round((this.objWeather.feelsLike - 273.15) * 100) / 100 + "&#8451;";
         this.currentWeatherSpanHTML.textContent = this.objWeather.currentWeather;
-        this.sunriseSpanHTML.textContent = new Date(this.objWeather.sunrise * 1000);
-        this.sunsetSpanHTML.textContent = new Date(this.objWeather.sunset * 1000);
+        this.sunriseSpanHTML.textContent = new Date(this.objWeather.sunrise * 1000).toLocaleString().split(" ")[1];
+        this.sunsetSpanHTML.textContent = new Date(this.objWeather.sunset * 1000).toLocaleString().split(" ")[1];
         this.humiditySpanHTML.textContent = this.objWeather.humidity + "%";
         this.windSpanHTML.textContent = this.objWeather.wind + "m/s";
-        this.directionSpanHTML.textContent = this.objWeather.windDirection;
+        //this.directionSpanHTML.textContent = this.objWeather.windDirection;
+        this.directionSpanHTML.style.transform = `rotate(${this.objWeather.windDirection}deg)`
         this.pressureSpanHTML.textContent = this.objWeather.pressure + "hPa";
         console.log(json);
     }
