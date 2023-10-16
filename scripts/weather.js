@@ -25,7 +25,7 @@ class Weather {
     }
 
     getLocation() {
-        fetch('http://api.openweathermap.org/geo/1.0/direct?' + new URLSearchParams({
+        fetch('https://api.openweathermap.org/geo/1.0/direct?' + new URLSearchParams({
             q: this.city,
             appid: "470f5ba6ca749dbd45cbda178d735719"
         }))
