@@ -10,18 +10,18 @@ class Cloud {
     opacity
     option
 
-    constructor(linkToImgParam, divElementParam, optionParam) {
+    constructor(linkToImgParam, divElementParam, sun) {
         this.linkToImg = linkToImgParam;
         this.divElement = divElementParam;
         const randomTime = Math.floor(Math.random() * 5000) + 3000
-        this.option = optionParam;
+
         this.opacity = (Math.floor(Math.random() * 7) / 7) + 0.1
         this.scale = 3000 * 1.8 / randomTime
         this.scale = Math.floor(this.scale * 10) / 10
         this.randomTime = 17000 - randomTime
-        if (this.opacity.sun) {
-            this.scale = 1.8
-            this.opacity = 1
+        if (sun) {
+            this.scale = 1.3
+            this.opacity = 0.9
 
         }
         this.createCloud();

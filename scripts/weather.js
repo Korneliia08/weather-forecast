@@ -22,6 +22,8 @@ class Weather {
     imgHTML = document.querySelector(".imgDecribeWeather");
     localTimeTeg = document.querySelector(".localTimeTeg");
 
+    interval;
+
     constructor(whichCityParam) {
         this.redInput = document.querySelector("input[name='inputCity']");
         this.city = whichCityParam;
@@ -94,13 +96,20 @@ class Weather {
             });
     }
 
-    updateWeather() {
-        let time = new Date()
-        // console.log(
-        //     new Date(
-        //         Date.UTC(time.getFullYear(), time.getMonth(), time.getDate(), time.getHours(), time.getMinutes(), time.getMilliseconds()))
-        // )
+    setTime() {
+        const timeBetwenLocalAndUtc = Math.abs(new Date().getTimezoneOffset() * 1000 * 60);
+        const actualTime = new Date().getTime();
+        const utcTime = actualTime - timeBetwenLocalAndUtc;
+        const localTime = utcTime + this.objWeather.localTime * 1000;
+        const localTimeDate = new Date(localTime).toLocaleTimeString();
+        this.localTimeTeg.textContent = localTimeDate
+    }
 
+    updateWeather() {
+        this.interval = setInterval(() => {
+            this.setTime()
+        }, 1000)
+        this.setTime()
         this.titleCityHTML.textContent = this.objWeather.nameOfCityWeather;
         this.tempSpanHTML.innerHTML = Math.round((this.objWeather.temp - 273.15) * 100) / 100 + "&#8451;";
         this.feelsLikeSpanHTML.innerHTML = Math.round((this.objWeather.feelsLike - 273.15) * 100) / 100 + "&#8451;";

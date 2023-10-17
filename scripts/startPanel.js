@@ -44,7 +44,7 @@ class StartPanel {
             this.arrayClouds.push(new Cloud("./assets/images/rain.png", this.startPanel));
         }
         //   for (let index = 0; index < 1; index++) {
-        this.arrayClouds.push(new Cloud("./assets/images/sun.png", this.startPanel, {sun: true}));
+        this.arrayClouds.push(new Cloud("./assets/images/sun.png", this.startPanel, true));
         //      }
         for (let index = 0; index < 10; index++) {
             this.arrayClouds.push(new Cloud("./assets/images/cloud.png", this.startPanel));

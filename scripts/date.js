@@ -14,6 +14,6 @@ class DateTime {
         var monthArr = ["January", "February", "March", "April", "May", "June", "July",
             "August", "September", "October", "November", "December"];
         var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-        this.dateTimeHTML.textContent = days[day] + ' ' + numberDay + ', ' + ' ' + monthArr[(month)];
+        this.dateTimeHTML.textContent = days[day] + ' ' + numberDay + ', ' + ' ' + monthArr[(month)] + ', ' + date.getFullYear();
     }
 }
