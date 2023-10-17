@@ -8,6 +8,6 @@ This forecast:
 * made using class;
 
 ## Start panel
-![image](https://github.com/Korneliia08/toDoList2/blob/master/assets/images/toDoListStart.png)
+![image](https://github.com/Korneliia08/weather-forecast/blob/master/assets/images/startPanel.png)
 ## Weather panel
-![image](https://github.com/Korneliia08/toDoList2/blob/master/assets/images/toDoListStart.png)
+![image](https://github.com/Korneliia08/weather-forecast/blob/master/assets/images/weatherPanel.png)
