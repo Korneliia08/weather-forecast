@@ -20,6 +20,7 @@ class Weather {
     pressureSpanHTML = document.querySelector(".pressureSpan");
     directionSpanHTML = document.querySelector(".directionSpan");
     imgHTML = document.querySelector(".imgDecribeWeather");
+    localTimeTeg = document.querySelector(".localTimeTeg");
 
     constructor(whichCityParam) {
         this.redInput = document.querySelector("input[name='inputCity']");
@@ -83,7 +84,8 @@ class Weather {
                     wind: json.wind.speed,
                     windDirection: json.wind.deg,
                     pressure: json.main.pressure,
-                    nameOfIcon: json.weather[0].icon
+                    nameOfIcon: json.weather[0].icon,
+                    localTime: json.timezone
                 }
                 this.updateWeather();
             })
@@ -93,6 +95,12 @@ class Weather {
     }
 
     updateWeather() {
+        let time = new Date()
+        // console.log(
+        //     new Date(
+        //         Date.UTC(time.getFullYear(), time.getMonth(), time.getDate(), time.getHours(), time.getMinutes(), time.getMilliseconds()))
+        // )
+
         this.titleCityHTML.textContent = this.objWeather.nameOfCityWeather;
         this.tempSpanHTML.innerHTML = Math.round((this.objWeather.temp - 273.15) * 100) / 100 + "&#8451;";
         this.feelsLikeSpanHTML.innerHTML = Math.round((this.objWeather.feelsLike - 273.15) * 100) / 100 + "&#8451;";
@@ -104,5 +112,6 @@ class Weather {
         this.directionSpanHTML.style.transform = `rotate(${this.objWeather.windDirection}deg)`
         this.pressureSpanHTML.textContent = this.objWeather.pressure + "hPa";
         this.imgHTML.src = `https://openweathermap.org/img/wn/${this.objWeather.nameOfIcon}@2x.png`
+        // this.localTimeTeg.textContent = this.objWeather.localTime;
     }
 }
