@@ -3,9 +3,21 @@ class Header {
     whichCity;
     wheatheObj;
 
+
     constructor() {
+        this.loadLocalStorage();
         this.inputCity.addEventListener("keypress", this.getCity.bind(this));
-        this.wheatheObj = new Weather("Mostyska");
+    }
+
+    loadLocalStorage() {
+        let arrayCities = JSON.parse(window.localStorage.getItem("titleCity"));
+        if (arrayCities == null) {
+            this.wheatheObj = new Weather("Mostyska");
+        } else {
+            let lengthOfArray = arrayCities.length;
+            let lastCity = arrayCities[lengthOfArray - 1];
+            this.wheatheObj = new Weather(lastCity);
+        }
     }
 
     getCity(event) {

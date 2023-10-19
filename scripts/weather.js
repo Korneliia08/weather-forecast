@@ -24,11 +24,18 @@ class Weather {
 
     interval;
 
+    //localStorage
+    arrayOfLastsCities = [];
+
     constructor(whichCityParam) {
         this.redInput = document.querySelector("input[name='inputCity']");
         this.city = whichCityParam;
         this.getLocation();
-
+        let json = window.localStorage.getItem("titleCity");
+        this.arrayOfLastsCities = JSON.parse(json);
+        if (this.arrayOfLastsCities == null) {
+            this.arrayOfLastsCities = [];
+        }
     }
 
     getLocation() {
@@ -55,6 +62,7 @@ class Weather {
                     this.lon = jsonArray[0].lon;
                     this.getWeather();
                     this.redInput.value = "";
+                    this.addToLocalStorage();
                 }
             })
             .catch(error => {
@@ -122,5 +130,12 @@ class Weather {
         this.pressureSpanHTML.textContent = this.objWeather.pressure + "hPa";
         this.imgHTML.src = `https://openweathermap.org/img/wn/${this.objWeather.nameOfIcon}@2x.png`
         // this.localTimeTeg.textContent = this.objWeather.localTime;
+    }
+
+
+    addToLocalStorage() {
+        if (this.arrayOfLastsCities[this.arrayOfLastsCities.length - 1] === this.nameOfCity) return
+        this.arrayOfLastsCities.push(this.nameOfCity);
+        window.localStorage.setItem("titleCity", JSON.stringify(this.arrayOfLastsCities));
     }
 }
