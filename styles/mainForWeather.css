@@ -1,18 +1,23 @@
 body .wrapper main {
     background-color: #dadada;
     display: none;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: calc(100% - 170px);
     font-size: 15px;
+    position: relative;
+    /*background-image: url("../assets/rain.gif");*/
+
 }
 
 body .wrapper main .blockForWeatherToday {
     width: 100%;
-    background-color: #dcdbff;
     display: flex;
     justify-content: center;
     align-items: center;
     column-gap: 10px;
+
 }
 
 body .wrapper main .blockForWeatherToday .mainInformation,
@@ -27,8 +32,59 @@ body .wrapper main .blockForWeatherToday .otherInformation {
     align-items: center;
 }
 
-body .wrapper main .blockForWeatherToday .otherInformation {
+body .wrapper main .blockForLastCities {
+    display: none;
+    position: absolute;
+    left: 5px;
+    box-shadow: 1px 1px 5px 2px #5353db, -1px -1px 5px 2px #000000bd, 0px 0px 60px 1px inset #5b5bffcf;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-sizing: border-box;
+    row-gap: 10px;
+}
 
+.h2History {
+    color: #001e5e;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-shadow: 0px 0px 2px black;
+}
+
+.ulHistory {
+    color: #002d54;
+    font-size: 19px;
+    font-weight: bold;
+    text-shadow: 0px 0px 1px white;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+}
+
+.liHistory {
+    padding-left: 5px;
+}
+
+.liHistory:first-child {
+    color: #000000;
+}
+
+.liHistory:hover {
+    cursor: pointer;
+    color: #004b8a;
+}
+
+.liHistory::marker {
+    content: '#';
+    color: #053ca1;
+    text-shadow: 0px 0px 1px black;
+}
+
+body .wrapper main .blockForWeatherToday .otherInformation {
+    min-width: 290px;
 }
 
 .imgDecribeWeather {
