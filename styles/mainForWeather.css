@@ -4,10 +4,30 @@ body .wrapper main {
     justify-content: center;
     align-items: center;
     width: 100%;
+    min-height: calc(100% - 170px);
     height: calc(100% - 170px);
     font-size: 15px;
     position: relative;
-    /*background-image: url("../assets/rain.gif");*/
+
+
+}
+
+.rain {
+    background-image: url('../assets/rain.gif');
+    background-size: 400px 100%;
+}
+
+.nightBackGroud {
+    background-image: url('../assets/night.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+}
+
+.sunBackGroud {
+    background-image: url('../assets/sun.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 
 }
 
@@ -30,6 +50,18 @@ body .wrapper main .blockForWeatherToday .otherInformation {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+}
+
+body .wrapper main .blockForWeatherToday .mainInformationH2 {
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    text-shadow: 0px 1px 2px black;
+    padding: 1px;
+    background-color: #1cfff257;
+    border-radius: 20px;
+    margin-bottom: 8px;
+    box-shadow: 0px 0px 5px 0px inset black;
 }
 
 body .wrapper main .blockForLastCities {
@@ -98,7 +130,8 @@ body .wrapper main .blockForWeatherToday .otherInformation {
 
 span.degree,
 .nowTime,
-time,
+.otherInformation time,
+.mainInformation time,
 .otherInformationSpan {
     font-size: 20px;
     color: #fff700;
@@ -174,4 +207,83 @@ time {
 
 .timeClockTd {
     font-size: 19px;
+}
+
+body .wrapper main .blockForWeatherToday .blockForFewDays {
+    position: absolute;
+    right: 5px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2px;
+    padding: 10px;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 5px 2px #5353db, -1px -1px 5px 2px #000000bd, 0px 0px 60px 1px inset #5b5bffcf;
+    background-color: #ffffff;
+    border-radius: 15px;
+}
+
+body .wrapper main .blockForWeatherToday .oneDay {
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+    box-sizing: border-box;
+}
+
+body .wrapper main .blockForWeatherToday .day,
+body .wrapper main .blockForWeatherToday .night {
+
+    width: 100%;
+    padding: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 2px;
+}
+
+body .wrapper main .blockForWeatherToday .day {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: rgb(0 160 214 / 33%);
+    box-shadow: 0px 0px 4px 1px inset #003185;
+}
+
+body .wrapper main .blockForWeatherToday .night {
+    background-color: rgba(70, 73, 73, 0.68);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: 0px 0px 4px 0px inset black;
+}
+
+.weather5daysTitle {
+    color: #002d54;
+    font-size: 15px;
+    font-weight: bold;
+    text-shadow: 0px 0px 1px white;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+}
+
+.timeFevDays {
+    color: #0b0055;
+    font-size: 13px;
+    text-shadow: 0px 1px 2px black;
+}
+
+.iconImg {
+    width: 20px;
+    scale: 2;
+    padding-right: 4px;
+    padding-left: 5px;
+}
+
+
+.fiveDayText {
+    font-size: 15px;
+    color: #0b0b7a;
+    font-weight: bold;
+    text-shadow: 0px 0px 1px #6060b4;
 }

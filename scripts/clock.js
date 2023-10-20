@@ -22,10 +22,20 @@ class Clock {
         }, 1000);
     }
 
+
     updateTime() {
         let time = new Date();
-        this.spanHour.textContent = time.getHours();
-        this.spanMinutes.textContent = time.getMinutes();
-        this.spanSeconds.textContent = time.getSeconds();
+        this.spanHour.textContent = this.addZero(time.getHours());
+        this.spanMinutes.textContent = this.addZero(time.getMinutes());
+        this.spanSeconds.textContent = this.addZero(time.getSeconds());
+    }
+
+    /**
+     * ## Add zero to number for time
+     * @param number - number to repair
+     * @return number
+     * */
+    addZero(number) {
+        return number < 10 ? '0' + number : number
     }
 }

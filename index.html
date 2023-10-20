@@ -59,90 +59,96 @@
         </div>
     </header>
     <main>
-        <div class="blockForWeatherToday">
-            <div class="blockForLastCities"><h2 class="h2History">History:</h2>
+        <div class="rainDiv">
+            <div class="blockForWeatherToday">
+                <div class="blockForLastCities"><h2 class="h2History">History:</h2>
+                </div>
+                <div>
 
-            </div>
-
-            <div class="mainInformation">
-                <table>
-                    <tr>
-                        <td><span class="titleInTable">Temperature:
+                    <h2 class="mainInformationH2">Actual weather:</h2>
+                    <div class="mainInformation">
+                        <table>
+                            <tr>
+                                <td><span class="titleInTable">Temperature:
                         </span></td>
-                        <td>
+                                <td>
                             <span
                                     class="degree tempSpan"> &nbsp;20 &#8451;</span></td>
-                        <td class="whichWeatherTd" rowspan="2">
+                                <td class="whichWeatherTd" rowspan="2">
 
-                            <div>
+                                    <div>
 
-                                <img alt="photoWhichWeather"
-                                     class="imgDecribeWeather"><span
-                                    class="titleInTable currentWeatherSpan">Sun</span>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><span class="titleInTable">Feels like:
+                                        <img alt="photoWhichWeather"
+                                             class="imgDecribeWeather"><span
+                                            class="titleInTable currentWeatherSpan">Sun</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="titleInTable">Feels like:
                         </span></td>
-                        <td>
+                                <td>
                             <span
                                     class="degree feelsLikeSpan">&nbsp;20 &#8451;</span></td>
-                    </tr>
+                            </tr>
 
 
-                    <tr>
-                        <td class="sunriseTd">
+                            <tr>
+                                <td class="sunriseTd">
 
-                            <div class="sunRiseSetDiv">
-                                <img alt="photoSunrise" class="imgSunriseSunset"
-                                     src="./assets/images/sunrise.png">
-                                <span class="titleInTable">Sunrise:</span>
-                                <time class="sunriseSpan"> 07:46 AM</time>
-                            </div>
-                        </td>
-                        <td colspan="2">
-                            <div class="sunRiseSetDiv">
-                                <img alt="photoSunset" class="imgSunriseSunset imgSunset"
-                                     src="./assets/images/sunset.png">
-                                <span class="titleInTable">Sunset:</span>
-                                <time class="sunsetSpan"> 07:46 PM</time>
-                            </div>
-                        </td>
+                                    <div class="sunRiseSetDiv">
+                                        <img alt="photoSunrise" class="imgSunriseSunset"
+                                             src="./assets/images/sunrise.png">
+                                        <span class="titleInTable">Sunrise:</span>
+                                        <time class="sunriseSpan"> 07:46 AM</time>
+                                    </div>
+                                </td>
+                                <td colspan="2">
+                                    <div class="sunRiseSetDiv">
+                                        <img alt="photoSunset" class="imgSunriseSunset imgSunset"
+                                             src="./assets/images/sunset.png">
+                                        <span class="titleInTable">Sunset:</span>
+                                        <time class="sunsetSpan"> 07:46 PM</time>
+                                    </div>
+                                </td>
 
-                    </tr>
-                    <tr>
-                        <td class="timeClockTd" colspan="3"><span class="localTimeSpan">Local time: </span>
-                            <time class="localTimeTeg">16:23:04</time>
-                        </td>
-                    </tr>
+                            </tr>
+                            <tr>
+                                <td class="timeClockTd" colspan="3"><span class="localTimeSpan">Local time: </span>
+                                    <time class="localTimeTeg">16:23:04</time>
+                                </td>
+                            </tr>
 
-                </table>
-            </div>
-            <div class="otherInformation">
-                <table>
-                    <tr>
-                        <td><span class="titleInTable">Humidity:</span></td>
-                        <td><span class="otherInformationSpan humiditySpan">18%</span></td>
-                    </tr>
-                    <tr>
-                        <td><span class="titleInTable">Wind speed:</span></td>
-                        <td><span class="otherInformationSpan windSpan">20 m/sek</span></td>
-                    </tr>
-                    <tr>
-                        <td><span class="titleInTable">Wind direction:</span>
-                        </td>
-                        <td>
+                        </table>
+                    </div>
+                </div>
+                <div class="otherInformation">
+                    <table>
+                        <tr>
+                            <td><span class="titleInTable">Humidity:</span></td>
+                            <td><span class="otherInformationSpan humiditySpan">18%</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="titleInTable">Wind speed:</span></td>
+                            <td><span class="otherInformationSpan windSpan">20 m/sek</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="titleInTable">Wind direction:</span>
+                            </td>
+                            <td>
                             <span class="otherInformationSpan "><img class="directionSpan"
                                                                      src="assets/images/arrow.png"></span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><span class="titleInTable">Pressure:</span></td>
-                        <td><span class="otherInformationSpan pressureSpan">400mm</span></td>
-                    </tr>
-                </table>
-
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="titleInTable">Pressure:</span></td>
+                            <td><span class="otherInformationSpan pressureSpan">400mm</span></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="blockForFewDays">
+                    <h2 class="weather5daysTitle">Weather for 5 days</h2>
+                </div>
             </div>
         </div>
     </main>
@@ -157,5 +163,6 @@
 <script src="scripts/startPanel.js"></script>
 <script src="scripts/main.js"></script>
 <script src="scripts/weather.js"></script>
+<script src="scripts/weatherOn5Days.js"></script>
 </body>
 </html>

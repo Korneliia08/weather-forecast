@@ -1,7 +1,7 @@
 class Header {
     inputCity = document.querySelector("input[name='inputCity']");
     whichCity;
-    wheatherObj;
+    weatherObj;
 
 
     constructor() {
@@ -13,29 +13,29 @@ class Header {
     loadLocalStorage() {
         const arrayCities = JSON.parse(window.localStorage.getItem("titleCity"));
         if (arrayCities == null) {
-            this.wheatherObj = new Weather("Mostyska");
+            this.weatherObj = new Weather("Mostyska");
         } else {
             let lengthOfArray = arrayCities.length;
             let lastCity = arrayCities[lengthOfArray - 1];
-            this.wheatherObj = new Weather(lastCity);
+            this.weatherObj = new Weather(lastCity);
         }
     }
 
     getCity(event) {
         if (event.code === "Enter") {
-            if (this.wheatherObj) {
-                clearInterval(this.wheatherObj.interval)
+            if (this.weatherObj) {
+                clearInterval(this.weatherObj.interval)
             }
             this.whichCity = event.target.value;
-            this.wheatherObj = new Weather(this.whichCity);
+            this.weatherObj = new Weather(this.whichCity);
         }
     }
 
     selectCityFromHistory(event) {
-        if (this.wheatherObj) {
-            clearInterval(this.wheatherObj.interval)
+        if (this.weatherObj) {
+            clearInterval(this.weatherObj.interval)
         }
-        this.wheatherObj = new Weather(event.target.textContent);
+        this.weatherObj = new Weather(event.target.textContent);
     }
 
     createHistory() {
@@ -51,7 +51,7 @@ class Header {
         blockHistory.style.display = "flex";
         let ul = document.createElement("ul");
         ul.classList.add("ulHistory");
-        const lastCity = arrOfCities.slice(-5);
+        const lastCity = arrOfCities.slice(-10);
         lastCity.reverse();
 
         lastCity.forEach(city => {

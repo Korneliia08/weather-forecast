@@ -27,6 +27,8 @@ class Weather {
     //localStorage
     arrayOfLastsCities = [];
 
+    objWeatherOn5days;
+
     constructor(whichCityParam) {
         this.redInput = document.querySelector("input[name='inputCity']");
         this.city = whichCityParam;
@@ -60,6 +62,8 @@ class Weather {
                     this.nameOfCity = jsonArray[0].name;
                     this.lat = jsonArray[0].lat;
                     this.lon = jsonArray[0].lon;
+                    this.objWeatherOn5days = new WeatherOn5Days(this.lat, this.lon);
+
                     this.getWeather();
                     this.redInput.value = "";
                     this.addToLocalStorage();
@@ -111,17 +115,32 @@ class Weather {
         const localTime = utcTime + this.objWeather.localTime * 1000;
         const localTimeDate = new Date(localTime).toLocaleTimeString();
         this.localTimeTeg.textContent = localTimeDate
+        return new Date(localTime)
     }
 
     updateWeather() {
         this.interval = setInterval(() => {
             this.setTime()
         }, 1000)
-        this.setTime()
+        let localTime = this.setTime()
         this.titleCityHTML.textContent = this.objWeather.nameOfCityWeather;
         this.tempSpanHTML.innerHTML = Math.round((this.objWeather.temp - 273.15) * 100) / 100 + "&#8451;";
         this.feelsLikeSpanHTML.innerHTML = Math.round((this.objWeather.feelsLike - 273.15) * 100) / 100 + "&#8451;";
         this.currentWeatherSpanHTML.textContent = this.objWeather.currentWeather;
+        document.querySelector("main").style.backgroundImage = "";
+        document.querySelector(".rainDiv").classList.remove("rain")
+
+        if (localTime.getHours() > 20 || localTime.getHours() < 8) {
+            document.querySelector("main").className = ''
+            document.querySelector("main").classList.add("nightBackGroud")
+        } else {
+            document.querySelector("main").className = ''
+            document.querySelector("main").classList.add("sunBackGroud")
+        }
+        if (this.objWeather.currentWeather === 'Rain') {
+
+            document.querySelector(".rainDiv").classList.add("rain")
+        }
         this.sunriseSpanHTML.textContent = new Date(this.objWeather.sunrise * 1000).toLocaleString().split(" ")[1];
         this.sunsetSpanHTML.textContent = new Date(this.objWeather.sunset * 1000).toLocaleString().split(" ")[1];
         this.humiditySpanHTML.textContent = this.objWeather.humidity + "%";
@@ -135,7 +154,7 @@ class Weather {
 
     addToLocalStorage() {
         if (this.arrayOfLastsCities[this.arrayOfLastsCities.length - 1] === this.nameOfCity) return
-        this.arrayOfLastsCities = this.arrayOfLastsCities.slice(-5)
+        this.arrayOfLastsCities = this.arrayOfLastsCities.slice(-10)
         if (this.arrayOfLastsCities.indexOf(this.nameOfCity) !== -1) {
             this.arrayOfLastsCities = this.arrayOfLastsCities.filter(k => k !== this.nameOfCity)
         }
