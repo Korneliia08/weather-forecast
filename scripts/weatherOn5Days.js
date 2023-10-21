@@ -78,7 +78,7 @@ class WeatherOn5Days {
         // for day
         let temperatureDay = document.createElement("span");
         temperatureDay.className = "fiveDayText"
-        temperatureDay.innerHTML = objDayNightParam.day.main.temp + "&#8451;";
+        temperatureDay.innerHTML = objDayNightParam.day.main.temp + "&deg;C";
 
         let windSpeedDay = document.createElement("span");
         windSpeedDay.className = "fiveDayText"
@@ -92,7 +92,7 @@ class WeatherOn5Days {
         //for night
         let temperatureNight = document.createElement("span");
         temperatureNight.className = "fiveDayText"
-        temperatureNight.innerHTML = objDayNightParam.night.main.temp + "&#8451;";
+        temperatureNight.innerHTML = objDayNightParam.night.main.temp + "&deg;C";
 
         let windSpeedNight = document.createElement("span");
         windSpeedNight.className = "fiveDayText"

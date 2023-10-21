@@ -124,8 +124,8 @@ class Weather {
         }, 1000)
         let localTime = this.setTime()
         this.titleCityHTML.textContent = this.objWeather.nameOfCityWeather;
-        this.tempSpanHTML.innerHTML = Math.round((this.objWeather.temp - 273.15) * 100) / 100 + "&#8451;";
-        this.feelsLikeSpanHTML.innerHTML = Math.round((this.objWeather.feelsLike - 273.15) * 100) / 100 + "&#8451;";
+        this.tempSpanHTML.innerHTML = Math.round((this.objWeather.temp - 273.15) * 100) / 100 + "&deg;C";
+        this.feelsLikeSpanHTML.innerHTML = Math.round((this.objWeather.feelsLike - 273.15) * 100) / 100 + "&deg;C";
         this.currentWeatherSpanHTML.textContent = this.objWeather.currentWeather;
         document.querySelector(".rainDiv").classList.remove("rain");
         let mainHTML = document.querySelector("main");
@@ -146,7 +146,6 @@ class Weather {
         this.directionSpanHTML.style.transform = `rotate(${this.objWeather.windDirection}deg)`
         this.pressureSpanHTML.textContent = this.objWeather.pressure + "hPa";
         this.imgHTML.src = `https://openweathermap.org/img/wn/${this.objWeather.nameOfIcon}@2x.png`
-        // this.localTimeTeg.textContent = this.objWeather.localTime;
     }
 
 
