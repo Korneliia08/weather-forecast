@@ -63,6 +63,8 @@ body .wrapper main .blockForWeatherToday .mainInformationH2 {
     background-color: #1cfff257;
     border-radius: 20px;
     margin-bottom: 8px;
+    position: relative;
+    z-index: 100;
     box-shadow: 0px 0px 5px 0px inset black;
 }
 
