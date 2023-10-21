@@ -48,7 +48,8 @@ class WeatherOn5Days {
     }
 
     displayWeather() {
-        this.blockForFewDays.innerHTML = '';
+        const allDiv = this.blockForFewDays.querySelectorAll("div");
+        Array.from(allDiv).forEach(div => div.remove())
         this.weatherArray.forEach(objDayNight => {
             let blockForWeather = document.createElement("div");
             blockForWeather.classList.add("oneDay");

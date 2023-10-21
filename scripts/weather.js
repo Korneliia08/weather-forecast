@@ -127,18 +127,16 @@ class Weather {
         this.tempSpanHTML.innerHTML = Math.round((this.objWeather.temp - 273.15) * 100) / 100 + "&#8451;";
         this.feelsLikeSpanHTML.innerHTML = Math.round((this.objWeather.feelsLike - 273.15) * 100) / 100 + "&#8451;";
         this.currentWeatherSpanHTML.textContent = this.objWeather.currentWeather;
-        document.querySelector("main").style.backgroundImage = "";
-        document.querySelector(".rainDiv").classList.remove("rain")
+        document.querySelector(".rainDiv").classList.remove("rain");
 
         if (localTime.getHours() > 20 || localTime.getHours() < 8) {
-            document.querySelector("main").className = ''
+            document.querySelector("main").className = '';
             document.querySelector("main").classList.add("nightBackGroud")
         } else {
             document.querySelector("main").className = ''
             document.querySelector("main").classList.add("sunBackGroud")
         }
         if (this.objWeather.currentWeather === 'Rain') {
-
             document.querySelector(".rainDiv").classList.add("rain")
         }
         this.sunriseSpanHTML.textContent = new Date(this.objWeather.sunrise * 1000).toLocaleString().split(" ")[1];

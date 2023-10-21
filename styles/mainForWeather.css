@@ -5,7 +5,7 @@ body .wrapper main {
     align-items: center;
     width: 100%;
     min-height: calc(100% - 170px);
-    height: calc(100% - 170px);
+    /*    height: calc(100% - 170px);*/
     font-size: 15px;
     position: relative;
 
@@ -13,19 +13,19 @@ body .wrapper main {
 }
 
 .rain {
-    background-image: url('../assets/rain.gif');
+    background-image: url('../assets/backgroundImages/rain.gif');
     background-size: 400px 100%;
 }
 
 .nightBackGroud {
-    background-image: url('../assets/night.jpg');
+    background-image: url('../assets/backgroundImages/night.jpg');
     background-size: 100% 100%;
     background-repeat: no-repeat;
 
 }
 
 .sunBackGroud {
-    background-image: url('../assets/sun.jpg');
+    background-image: url('../assets/backgroundImages/sun.jpg');
     background-size: 100% 100%;
     background-repeat: no-repeat;
 
@@ -50,6 +50,8 @@ body .wrapper main .blockForWeatherToday .otherInformation {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    z-index: 11;
 }
 
 body .wrapper main .blockForWeatherToday .mainInformationH2 {
@@ -77,6 +79,8 @@ body .wrapper main .blockForLastCities {
     border-radius: 15px;
     box-sizing: border-box;
     row-gap: 10px;
+
+    z-index: 11;
 }
 
 .h2History {
@@ -220,6 +224,8 @@ body .wrapper main .blockForWeatherToday .blockForFewDays {
     box-shadow: 1px 1px 5px 2px #5353db, -1px -1px 5px 2px #000000bd, 0px 0px 60px 1px inset #5b5bffcf;
     background-color: #ffffff;
     border-radius: 15px;
+
+    z-index: 11;
 }
 
 body .wrapper main .blockForWeatherToday .oneDay {
