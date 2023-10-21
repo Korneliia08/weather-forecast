@@ -153,7 +153,7 @@ class Weather {
         if (this.arrayOfLastsCities[this.arrayOfLastsCities.length - 1] === this.nameOfCity) return
         this.arrayOfLastsCities = this.arrayOfLastsCities.slice(-10)
         if (this.arrayOfLastsCities.indexOf(this.nameOfCity) !== -1) {
-            this.arrayOfLastsCities = this.arrayOfLastsCities.filter(k => k !== this.nameOfCity)
+            this.arrayOfLastsCities = this.arrayOfLastsCities.filter(city => city !== this.nameOfCity)
         }
         this.arrayOfLastsCities.push(this.nameOfCity);
         window.localStorage.setItem("titleCity", JSON.stringify(this.arrayOfLastsCities));
