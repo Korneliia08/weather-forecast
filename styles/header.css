@@ -24,7 +24,6 @@ body .wrapper header .blockFordata time {
     font-size: 18px;
     text-shadow: 0px 0px 10px #100f0f;
     letter-spacing: 2px;
-    font-family: math;
 }
 
 body .wrapper header .blockForBottomOfHeader {
@@ -101,7 +100,6 @@ body .wrapper header .blockForBottomOfHeader .container .blockForInput {
 .spanForHour, .spanForMinutes, .spanForSekunds {
     font-size: 24px;
     color: darkblue;
-    font-family: cursive;
     text-shadow: 0px 1px 2px #022c7f;
 }
 
@@ -112,7 +110,6 @@ body .wrapper header .blockForBottomOfHeader .container .blockForInput {
 .spanForSekunds {
     font-size: 18px;
     color: #f6f6f6;
-    font-family: cursive;
     text-shadow: 2px 1px 2px #000000;
     font-weight: bold;
 }
@@ -121,7 +118,6 @@ body .wrapper header .blockForBottomOfHeader .container .blockForInput {
     color: white;
     letter-spacing: 1px;
     text-shadow: 0px 1px 1px #000f4f;
-    font-family: cursive;
     font-size: 20px;
 }
 
@@ -157,5 +153,4 @@ body .blockForInput input.redPlaceholder::placeholder {
     color: white;
     font-size: 35px;
     text-shadow: 0px 1px 2px black;
-    font-family: cursive;
 }

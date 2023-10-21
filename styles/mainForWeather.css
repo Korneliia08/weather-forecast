@@ -142,7 +142,6 @@ span.degree,
     padding-left: 4px;
     text-shadow: 0px 0px 5px black;
     font-weight: bold;
-    font-family: cursive;
 }
 
 .otherInformationSpan img {
@@ -156,7 +155,6 @@ span.degree,
     color: white;
     font-size: 24px;
     text-shadow: 0px 1px 2px black;
-    font-family: cursive;
     text-align: center;
 }
 
@@ -204,7 +202,6 @@ time {
     text-align: center;
     color: white;
     font-weight: bold;
-    font-family: cursive;
     font-size: 16px;
     text-shadow: 0px 1px 5px black;
 }
