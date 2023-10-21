@@ -7,6 +7,8 @@ class Header {
     constructor() {
         this.loadLocalStorage();
         this.inputCity.addEventListener("keypress", this.getCity.bind(this));
+        document.querySelector("#search").addEventListener("click", this.getCityClick.bind(this))
+
         this.updateLocalStorage();
     }
 
@@ -18,6 +20,13 @@ class Header {
             let lengthOfArray = arrayCities.length;
             let lastCity = arrayCities[lengthOfArray - 1];
             this.weatherObj = new Weather(lastCity);
+        }
+    }
+
+    getCityClick() {
+        if (this.weatherObj) {
+            clearInterval(this.weatherObj.interval)
+            this.weatherObj = new Weather(document.querySelector("[name=inputCity]").value);
         }
     }
 

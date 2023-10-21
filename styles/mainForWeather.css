@@ -290,3 +290,19 @@ body .wrapper main .blockForWeatherToday .night {
     font-weight: bold;
     text-shadow: 0px 0px 1px #6060b4;
 }
+
+.buttonSearch {
+    background-color: #ffffffd4;
+    color: darkblue;
+    border-radius: 10px;
+    border: 2px inset #0000df;
+    font-weight: bold;
+    text-shadow: 0px 1px 1px #949191;
+}
+
+
+.buttonSearch:hover {
+    background-color: rgba(238, 232, 232, 0.93);
+    cursor: pointer;
+    color: #1818af;
+}

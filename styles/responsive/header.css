@@ -5,6 +5,10 @@
 /*}*/
 
 @media (max-width: 895px) {
+    .buttonSearch {
+        display: block;
+    }
+
     body .wrapper header .blockForBottomOfHeader .container .blockForInput {
         top: 0px;
     }
@@ -83,9 +87,20 @@
         flex-direction: column;
         row-gap: 15px;
     }
+
+    .container {
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 500px) {
+
+    .blockForInput div {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 10px;
+    }
+
     .blockForInput .inputCheck {
         width: 180px;
     }

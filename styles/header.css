@@ -26,6 +26,27 @@ body .wrapper header .blockFordata time {
     letter-spacing: 2px;
 }
 
+.buttonSearch {
+    display: none;
+    margin-left: 20px;
+}
+
+.container {
+    display: flex;
+    column-gap: 35px;
+}
+
+.blockForInput {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px
+}
+
+.blockForInput div {
+    display: flex;
+}
+
+
 body .wrapper header .blockForBottomOfHeader {
     padding: 2px 0 20px 0;
     height: 100px;
