@@ -10,4 +10,4 @@ This forecast:
 ## Start panel
 ![image](https://github.com/Korneliia08/weather-forecast/blob/master/assets/images/startPanel.png)
 ## Weather panel
-![image](https://github.com/Korneliia08/weather-forecast/blob/master/assets/images/weatherPanel.png)
+![image](https://github.com/Korneliia08/weather-forecast/blob/master/assets/images/panelWeather.png)
