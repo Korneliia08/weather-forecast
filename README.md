@@ -2,8 +2,9 @@
 ![image: lastCommit](https://img.shields.io/github/last-commit/Korneliia08/weather-forecast/master)
 ![image:countLanguages](https://img.shields.io/github/languages/count/Korneliia08/weather-forecast)
 
-This forecast:
+## This forecast:
 * made in HTML, CSS,JS,
+* made some animation using transform,
 * it is a responsive website,
 * made using class;
 
